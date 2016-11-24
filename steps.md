@@ -13,19 +13,21 @@
  * remote setup
  	* set up the remote repository via the + button on github.com
  * in the local (from the root level directory of the repository)
-    * git init
-    * git add --all
-    * git commit -m "first commit"
-    * git remote add origin git@github.com:UserName/repository_name.git
-    * git push -u origin master  
+    * `git init`
+    * `git add --all`
+    * `git commit -m "first commit"`
+    * `git remote add origin git@github.com:UserName/repository_name.git`
+    * `git push -u origin master`  
 * for all future commits:
-	* git add --all or files to push
-	* git commit -m "what was done since last push"
-	* git push
+	* `git add --all` or files to push
+	* `git commit -m "what was done since last push"`
+	* `git push`
 3. Sign up for Heroku
  * install the heroku cli
  * login to heroku w/ `heroku login` from the root level directory of your repo
- * heroku create
- * heroku git:remote -a name_of_heroku_app (given as part of running heroku create)
- * git push heroku master
- * heroku open 
+ * `heroku create`
+ * `heroku git:remote -a name_of_heroku_app` (given as part of running heroku create)
+ * `git push heroku master`
+ * `heroku open`
+ * if this fails, run - `heroku logs` (to figure out what the error is)
+ * you can also test this locally with `heroku local` 
