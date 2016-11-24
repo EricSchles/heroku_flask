@@ -32,7 +32,11 @@
  * if this fails, run - `heroku logs` (to figure out what the error is)
  * you can also test this locally with `heroku local` 
 
- 4. Setting up database
+4. Setting up database
   * `heroku addons:create heroku-postgresql:hobby-dev`
   * `heroku pg:promote DATABASE_URL` - (this is defined in the above step by Created postgresql-globular-71299 as DATABASE_URL - specifically whatever is in place of postgresql-globular-71299)
-  * 
+  * createdb testing
+  * python manager.py db init
+  * python manager.py db migrate
+  * python manager.py db upgrade
+

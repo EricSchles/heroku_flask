@@ -1,5 +1,9 @@
 from app import app
+from app.models import Table
+import json
 
 @app.route("/")
 def index():
-    return "hi"
+    results = [elem.row for elem in Table.query.all()]
+    return json.dumps(results)
+        
